@@ -12,8 +12,9 @@ var config = {
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
-        document.getElementById('login_check').style.display = "block";
-        document.getElementById('login_div').style.display = "none"; 
+        // document.getElementById('login_check').style.display = "block";
+        // document.getElementById('login_div').style.display = "none"; 
+        window.location = "login.html"
         var user = firebase.auth().currentUser;
         if (user != null) {
             var email_id = user.email;
